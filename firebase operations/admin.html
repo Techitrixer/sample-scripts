@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page</title>
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+</head>
+<body>
+    <div id="user_div">
+        <button style="float:right; width:50px; height:50px;" class="btn credit-btn mt-30" onclick="user_logout()">Logout</button>
+        <div class="container">
+            <h3>Table1:</h3>
+            <h5>Content</h5>
+            <div class="jumbotron" id="table1-data">
+            </div>
+            <div class="jumbotron">
+                <form>
+                    <input type="text" class="form-control" id="title1" placeholder="Your title">
+                    <input type="text" class="form-control" id="message1" placeholder="Your message">
+                    <button class="btn credit-btn mt-30" type="submit" onclick="add_to_table1();">Add</button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <h3>Table2:</h3>
+            <h5>Content</h5>
+            <div class="jumbotron" id="table2-data">
+            </div>
+            <div class="jumbotron">
+                <form>
+                    <input type="text" class="form-control" id="title2" placeholder="Your title">
+                    <input type="text" class="form-control" id="message2" placeholder="Your message">
+                    <button class="btn credit-btn mt-30" type="submit" onclick="add_to_table2();">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC8GJ3YgxCbA6rnMqtAFFRhWGJmmRkNwmA",
+            authDomain: "techi-samples.firebaseapp.com",
+            databaseURL: "https://techi-samples.firebaseio.com",
+            projectId: "techi-samples",
+            storageBucket: "techi-samples.appspot.com",
+            messagingSenderId: "807371367086",
+            appId: "1:807371367086:web:684d9c5b4c2abe0dcc433f",
+            measurementId: "G-CNWZBBGXNM"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="js/auth_features.js"></script>
+    <script src="js/db_features.js"></script>
+</body>
+</html>
